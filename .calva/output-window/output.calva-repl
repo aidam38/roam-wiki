@@ -1,0 +1,444 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+c o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Starting Jack-in Terminal: npx shadow-cljs -d cider/cider-nrepl:0.26.0 watch :plugin
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS: 
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉shadow.user꞉> 
+; Creating cljs repl session...
+; Connecting cljs repl: shadow-cljs...
+;   The Calva Connection Log might have more connection progress information.
+; Connected session: cljs, repl: node-repl
+; TIPS: You can choose which REPL to use (clj or cljs):
+;    *Calva: Toggle REPL connection*
+;    (There is a button in the status bar for this)
+; Jack-in done.
+cljs꞉cljs.user꞉> 
+"https://roamresearch.com/#/app/notemap/page/07-26-2021"
+cljs꞉roam-wiki.roam꞉> 
+:repl/exception!
+; 
+; Execution error (SyntaxError) at (<cljs repl>:1).
+Invalid regular expression flags
+cljs꞉roam-wiki.roam꞉> 
+:repl/exception!
+; 
+; Execution error (SyntaxError) at (<cljs repl>:1).
+Invalid regular expression flags
+cljs꞉roam-wiki.roam꞉> 
+"https://roamresearch.com/#/app/notemap/page/07-26-2021"
+cljs꞉roam-wiki.roam꞉> 
+:repl/exception!
+; 
+; Execution error (SyntaxError) at (<cljs repl>:1).
+Invalid regular expression flags
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :fn-arity -----------------------------------------------------
+;  Resource: <eval>:1:1
+Wrong number of args (1) passed to cljs.core/re-find
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+:repl/exception!
+; 
+; Execution error (SyntaxError) at (<cljs repl>:1).
+Invalid regular expression flags
+cljs꞉roam-wiki.roam꞉> 
+nil
+cljs꞉roam-wiki.roam꞉> 
+:repl/exception!
+; 
+; Execution error (SyntaxError) at (<cljs repl>:1).
+Invalid regular expression flags
+cljs꞉roam-wiki.roam꞉> 
+:repl/exception!
+; 
+; Execution error (SyntaxError) at (<cljs repl>:1).
+Invalid regular expression flags
+cljs꞉roam-wiki.roam꞉> 
+["#/app/notemap/page/07-26-2021" "#/app/" "notemap/page/07-26-2021"]
+cljs꞉roam-wiki.roam꞉> 
+"notemap/page/07-26-2021"
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-ns ------------------------------------------------
+;  Resource: <eval>:2:9
+ No such namespace: str, could not locate str.cljs, str.cljc, or JavaScript source providing "str"
+--------------------------------------------------------------------------------
+
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:2:9
+ Use of undeclared Var str/split
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-ns ------------------------------------------------
+;  Resource: <eval>:1:2
+ No such namespace: str, could not locate str.cljs, str.cljc, or JavaScript source providing "str"
+--------------------------------------------------------------------------------
+
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:2
+ Use of undeclared Var str/split
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-ns ------------------------------------------------
+;  Resource: <eval>:2:8
+ No such namespace: str, could not locate str.cljs, str.cljc, or JavaScript source providing "str"
+--------------------------------------------------------------------------------
+
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:2:8
+ Use of undeclared Var str/split
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+nil
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-ns ------------------------------------------------
+;  Resource: <eval>:2:8
+ No such namespace: str, could not locate str.cljs, str.cljc, or JavaScript source providing "str"
+--------------------------------------------------------------------------------
+
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:2:8
+ Use of undeclared Var str/split
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-ns ------------------------------------------------
+;  Resource: <eval>:1:2
+ No such namespace: str, could not locate str.cljs, str.cljc, or JavaScript source providing "str"
+--------------------------------------------------------------------------------
+
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:2
+ Use of undeclared Var str/split
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+"notemap/page/07-26-2021"
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-ns ------------------------------------------------
+;  Resource: <eval>:4:10
+ No such namespace: str, could not locate str.cljs, str.cljc, or JavaScript source providing "str"
+--------------------------------------------------------------------------------
+
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:4:10
+ Use of undeclared Var str/includes?
+--------------------------------------------------------------------------------
+
+; ------ WARNING - :fn-arity -----------------------------------------------------
+;  Resource: <eval>:5:13
+ Wrong number of args (1) passed to cljs.core/re-find
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-ns ------------------------------------------------
+;  Resource: <eval>:4:10
+ No such namespace: str, could not locate str.cljs, str.cljc, or JavaScript source providing "str"
+--------------------------------------------------------------------------------
+
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:4:10
+ Use of undeclared Var str/includes?
+--------------------------------------------------------------------------------
+
+; ------ WARNING - :fn-arity -----------------------------------------------------
+;  Resource: <eval>:5:13
+ Wrong number of args (1) passed to cljs.core/re-find
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-ns ------------------------------------------------
+;  Resource: <eval>:4:10
+ No such namespace: str, could not locate str.cljs, str.cljc, or JavaScript source providing "str"
+--------------------------------------------------------------------------------
+
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:4:10
+ Use of undeclared Var str/includes?
+--------------------------------------------------------------------------------
+
+; ------ WARNING - :fn-arity -----------------------------------------------------
+;  Resource: <eval>:5:13
+ Wrong number of args (1) passed to cljs.core/re-find
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+"notemap/page/07-26-2021"
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-ns ------------------------------------------------
+;  Resource: <eval>:1:2
+ No such namespace: str, could not locate str.cljs, str.cljc, or JavaScript source providing "str"
+--------------------------------------------------------------------------------
+
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:2
+ Use of undeclared Var str/includes?
+--------------------------------------------------------------------------------
+
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:16
+ Use of undeclared Var roam-wiki.roam/tail
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-ns ------------------------------------------------
+;  Resource: <eval>:4:10
+ No such namespace: str, could not locate str.cljs, str.cljc, or JavaScript source providing "str"
+--------------------------------------------------------------------------------
+
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:4:10
+ Use of undeclared Var str/includes?
+--------------------------------------------------------------------------------
+
+; ------ WARNING - :fn-arity -----------------------------------------------------
+;  Resource: <eval>:5:13
+ Wrong number of args (1) passed to cljs.core/re-find
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-ns ------------------------------------------------
+;  Resource: <eval>:1:2
+ No such namespace: str, could not locate str.cljs, str.cljc, or JavaScript source providing "str"
+--------------------------------------------------------------------------------
+
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:2
+ Use of undeclared Var str/includes?
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :fn-arity -----------------------------------------------------
+;  Resource: <eval>:5:13
+ Wrong number of args (1) passed to cljs.core/re-find
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+true
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-ns ------------------------------------------------
+;  Resource: <eval>:1:2
+ No such namespace: str, could not locate str.cljs, str.cljc, or JavaScript source providing "str"
+--------------------------------------------------------------------------------
+
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:2
+ Use of undeclared Var str/includes?
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:27
+ Use of undeclared Var roam-wiki.roam/tail
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:27
+ Use of undeclared Var roam-wiki.roam/tail
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+"notemap/page/07-26-2021"
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:27
+ Use of undeclared Var roam-wiki.roam/tail
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :fn-arity -----------------------------------------------------
+;  Resource: <eval>:5:13
+ Wrong number of args (1) passed to cljs.core/re-find
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:1
+ Use of undeclared Var roam-wiki.roam/tail
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:1
+ Use of undeclared Var roam-wiki.roam/tail
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+"notemap/page/07-26-2021"
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:2
+ Use of undeclared Var roam-wiki.roam/tail
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+nil
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :fn-arity -----------------------------------------------------
+;  Resource: <eval>:5:13
+ Wrong number of args (1) passed to cljs.core/re-find
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:27
+ Use of undeclared Var roam-wiki.roam/tail
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+"notemap/page/07-26-2021"
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:2
+ Use of undeclared Var roam-wiki.roam/tail
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:1
+ Use of undeclared Var roam-wiki.roam/tail
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :fn-arity -----------------------------------------------------
+;  Resource: <eval>:5:13
+ Wrong number of args (1) passed to cljs.core/re-find
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :fn-arity -----------------------------------------------------
+;  Resource: <eval>:5:13
+ Wrong number of args (1) passed to cljs.core/re-find
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:1
+ Use of undeclared Var roam-wiki.roam/tail
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+"notemap/page"
+cljs꞉roam-wiki.roam꞉> 
+"notemap"
+cljs꞉roam-wiki.roam꞉> 
+"notemap"
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:1
+ Use of undeclared Var roam-wiki.roam/fadf
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+"notemap"
+cljs꞉roam-wiki.roam꞉> 
+"notemap"
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:5:25
+ Use of undeclared Var roam-wiki.core/graph-name
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.core꞉> 
+#'roam-wiki.roam/url
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:1
+ Use of undeclared Var roam-wiki.roam/graph-name
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+"notemap"
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:4:24
+ Use of undeclared Var roam-wiki.roam/graph-name
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:5:24
+ Use of undeclared Var roam-wiki.roam/graph-name
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:2
+ Use of undeclared Var roam-wiki.roam/head
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+nil
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:4:24
+ Use of undeclared Var roam-wiki.roam/graph-name
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:5:24
+ Use of undeclared Var roam-wiki.roam/graph-name
+--------------------------------------------------------------------------------
+
+cljs꞉roam-wiki.roam꞉> 
+#'roam-wiki.roam/graph-name
+cljs꞉roam-wiki.roam꞉> 
+#'roam-wiki.roam/base-url
+cljs꞉roam-wiki.roam꞉> 
+#'roam-wiki.roam/base-url
+cljs꞉roam-wiki.roam꞉> 
+"https://roamresearch.com/#/app/notemap"
+cljs꞉roam-wiki.roam꞉> 
