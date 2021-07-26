@@ -7,7 +7,7 @@
     [:div  "Editing as: "]
     [:div.flex.justify-center {:style {:flex-grow 1}}
      [:a.p-2 {:href (rm/get-page-url rm/current-user-page-uid)} (str "[[" rm/current-user-page-name "]]")]]]
-   [:div.log-button {:href (rm/get-page-url "IUTjyZyiV")} "💡 Dashboard"]
-   [:div.log-button {:href rm/base-url}
+   [:a.log-button {:href (rm/get-page-url "IUTjyZyiV")} "💡 Dashboard"]
+   [:a.log-button {:href rm/base-url}
     [:span.bp3-icon.bp3-icon-calendar.icon.bp3-icon-small]
     "Daily notes"]])
