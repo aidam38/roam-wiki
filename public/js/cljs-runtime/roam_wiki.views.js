@@ -2,7 +2,7 @@ goog.provide('roam_wiki.views');
 roam_wiki.views.divider = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.mb-2","div.mb-2",-710047800),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"flex","flex",-1425124628),"0 0 0.5px",new cljs.core.Keyword(null,"background-color","background-color",570434026),"rgb(57, 75, 89)",new cljs.core.Keyword(null,"margin-left","margin-left",2015598377),"20px",new cljs.core.Keyword(null,"margin-right","margin-right",809689658),"20px"], null)], null)], null);
 roam_wiki.views.todo_nodes = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(cljs.core.PersistentVector.EMPTY);
 roam_wiki.views.add_task_list_wrapper = (function roam_wiki$views$add_task_list_wrapper(){
-return roam_wiki.roam.roam_main().insertBefore(goog.dom.createDom("div",({"class": "roam-wiki-task-list-wrapper rm-article-wrapper rm-spacing--small", "style": "flex: 0 0 auto; margin-top: 50px;", "innerHTML": "<h1>My Tasks</h1>"})),roam_wiki.roam.roam_body_main());
+return roam_wiki.roam.roam_main().insertBefore(goog.dom.createDom("div",({"class": "roam-wiki-task-list-wrapper rm-article-wrapper rm-spacing--small", "style": "flex: 0 0 auto; margin-top: 50px;", "innerHTML": "<h1>My tasks</h1>"})),roam_wiki.roam.roam_body_main());
 });
 roam_wiki.views.mount_todo_list_BANG_ = (function roam_wiki$views$mount_todo_list_BANG_(){
 if(cljs.core.truth_(document.querySelector(".roam-wiki-task-list-wrapper"))){
@@ -10,17 +10,17 @@ return null;
 } else {
 var wrapper = roam_wiki.views.add_task_list_wrapper();
 var todos = cljs.core.map.cljs$core$IFn$_invoke$arity$2(cljs.core.first,roam_wiki.roam.user_todos(roam_wiki.roam.current_user_page_name));
-cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p1__28565_SHARP_){
-return roam_wiki.roam.mount_block_BANG_(p1__28565_SHARP_.id,p1__28565_SHARP_);
-}),cljs.core.reset_BANG_(roam_wiki.views.todo_nodes,cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p1__28564_SHARP_){
-return wrapper.appendChild(p1__28564_SHARP_);
-}),cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p1__28563_SHARP_){
-return goog.dom.createDom("div",({"id": new cljs.core.Keyword(null,"uid","uid",-1447769400).cljs$core$IFn$_invoke$arity$1(p1__28563_SHARP_), "class": "py-2", "style": "border-bottom: 1px solid rgba(55, 53, 47, 0.09);\n                                                    "}));
+cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p1__26573_SHARP_){
+return roam_wiki.roam.mount_block_BANG_(p1__26573_SHARP_.id,p1__26573_SHARP_);
+}),cljs.core.reset_BANG_(roam_wiki.views.todo_nodes,cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p1__26572_SHARP_){
+return wrapper.appendChild(p1__26572_SHARP_);
+}),cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p1__26571_SHARP_){
+return goog.dom.createDom("div",({"id": new cljs.core.Keyword(null,"uid","uid",-1447769400).cljs$core$IFn$_invoke$arity$1(p1__26571_SHARP_), "class": "py-2", "style": "border-bottom: 1px solid rgba(55, 53, 47, 0.09);\n                                                    "}));
 }),todos))));
 
 return (window.onhashchange = (function (){
-cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p1__28566_SHARP_){
-return roam_wiki.roam.unmount_node_BANG_(p1__28566_SHARP_);
+cljs.core.mapv.cljs$core$IFn$_invoke$arity$2((function (p1__26574_SHARP_){
+return roam_wiki.roam.unmount_node_BANG_(p1__26574_SHARP_);
 }),cljs.core.deref(roam_wiki.views.todo_nodes));
 
 wrapper.remove();

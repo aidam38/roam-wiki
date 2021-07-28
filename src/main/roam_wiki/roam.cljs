@@ -17,6 +17,8 @@
       (last (re-find #"^(.*?)/" tail))
       tail)))
 
+(js/console.log "ahoj")
+
 (def base-url
   (let [head (->> url
                   (re-find #"(.*)#")
@@ -30,7 +32,8 @@
   (-> "globalAppState"
       (js/localStorage.getItem)
       (js/JSON.parse)
-      (nth 6)
+      (seq)
+      (last)
       (nth 2)))
 
 (def api js/roamAlphaAPI)
