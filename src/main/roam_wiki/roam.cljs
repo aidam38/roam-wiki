@@ -35,9 +35,13 @@
 
 (def api js/roamAlphaAPI)
 
-(defn query [q & o]
+(defn q [q & o]
   (let [args (cons (str/replace (pr-str q) #"\n" " ") o)]
     (apply (.. api -data -q) args)))
+
+(defn query [& args]
+  (-> (apply q args)
+      (js->clj :keywordize-keys true)))
 
 (def current-user-page
   (-> (query '[:find (pull ?p [*])
@@ -49,8 +53,7 @@
                [?b :block/string ?bs]
                [(clojure.string/includes? ?bs email)]] current-user-email)
       (first)
-      (first)
-      (js->clj :keywordize-keys true)))
+      (first)))
 
 (def current-user-page-uid
   (:uid current-user-page))
@@ -68,7 +71,29 @@
 (def custom-sidebar-wrapper (gdom/createDom "div" #js{:id "roam-wiki-sidebar"}))
 
 (defn insert-custom-sidebar-wrapper! []
-  (. left-sidebar insertBefore custom-sidebar-wrapper (. left-sidebar-top-row -nextSibling)))
+  (.insertBefore left-sidebar custom-sidebar-wrapper (. left-sidebar-top-row -nextSibling)))
 
 (defn clear-left-sidebar! []
   (mapv gdom/removeNode (js/document.querySelectorAll ".log-button")))
+
+(defn roam-main [] (js/document.querySelector ".roam-main"))
+
+(defn roam-body-main [] (js/document.querySelector ".roam-body-main"))
+
+(defn clear-body-main []
+  (gdom/removeChildren (roam-body-main)))
+
+(defn user-todos [name]
+  (query '[:find (pull ?t [*])
+           :in $ ?n
+           :where [?t :block/refs ?np]
+           [?t :block/refs ?tp]
+           [?np :node/title ?n]
+           [?tp :node/title "TODO"]] name))
+
+(defn mount-block! [uid node]
+  (.renderBlock (.. api -ui -components) #js{:uid uid :el node}))
+
+(defn unmount-node! [node]
+  (js/console.log "unmounting")
+  (.unmountNode (.. api -ui -components) #js{:el node}))
