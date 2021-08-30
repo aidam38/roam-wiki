@@ -2,7 +2,14 @@
          "src/main"
          "src/test"]
  :deps {org.clojure/clojure {:mvn/version "1.10.3"}
-        thheller/shadow-cljs {:mvn/version "2.15.6"}}
+        thheller/shadow-cljs {:mvn/version "2.15.6"}
+        org.clojure/clojurescript {:mvn/version "1.10.866"}
+        reagent/reagent {:mvn/version "1.1.0"}
+        org.clojars.aidam/roam-plugin-tools
+        {:mvn/version "0.0.4"}
+        ;; {:local/root "../roam-plugin-tools"}
+        org.clojars.aidam/roam-alpha-api
+        {:mvn/version "1.0.3"}}
  :aliases
  {:cljs
   {:extra-deps {org.clojure/clojurescript {:mvn/version "1.10.866"}
