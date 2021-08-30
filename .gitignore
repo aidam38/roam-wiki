@@ -17,8 +17,7 @@ pom.xml.asc
 .nrepl-*
 .DS_Store
 .cpcache
-.lsp/git rm -r --cached <folder>
-
+.lsp
 .calva
 
 .hgignore
