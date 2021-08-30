@@ -1,5 +1,5 @@
 {
-  "name": "caltech-ea-roam-wiki",
+  "name": "roam-wiki",
   "version": "0.0.1",
   "private": true,
   "devDependencies": {

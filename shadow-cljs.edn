@@ -1,4 +1,11 @@
-{:deps {:aliases [:cljs :personal]}
+{:deps true
+ :source-paths ["src/dev"
+                "src/main"
+                "src/test"]
+ :dependencies
+ [[reagent "1.1.0"]
+  [org.clojars.aidam/roam-plugin-tools "0.0.3"]
+  [org.clojars.aidam/roam-alpha-api "1.0.3"]]
  :dev-http {8021 "public"}
  :builds
  {:plugin {:target :browser
