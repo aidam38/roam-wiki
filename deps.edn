@@ -2,7 +2,7 @@
          "src/main"
          "src/test"]
  :dependencies
- {org.clojure/clojure {:mvn/version "1.10.1"}
+ {org.clojure/clojure {:mvn/version "1.10.3"}
   org.clojure/clojurescript {:mvn/version "1.10.866"}}
  :aliases
  {:cljs
