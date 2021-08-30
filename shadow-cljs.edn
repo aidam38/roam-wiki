@@ -1,4 +1,4 @@
-{:deps {:aliases [:cljs]}
+{:deps {:aliases [:cljs :personal]}
  :dev-http {8021 "public"}
  :builds
  {:plugin {:target :browser
