@@ -4,6 +4,8 @@ node_modules/
 /checkouts
 /src/gen
 
+public/
+
 pom.xml
 pom.xml.asc
 *.iml
@@ -14,6 +16,9 @@ pom.xml.asc
 .lein-*
 .nrepl-*
 .DS_Store
+.cpcache
+.lsp
+.calva
 
 .hgignore
 .hg/
