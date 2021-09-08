@@ -4,17 +4,24 @@
    [roam-alpha-api.data :as rd]
    [goog.dom :as gdom]])
 
-(def current-user-page
-  (-> (rd/q '[:find (pull ?p [*])
-              :in $ email
-              :where
-              [?p :block/children ?b]
-              [?b :block/refs ?ep]
-              [?ep :node/title "email"]
-              [?b :block/string ?bs]
-              [(clojure.string/includes? ?bs email)]] (rpt/current-user-email))
+(defn find-records-where-keyval [table key val]
+  (-> (rd/q '[:find (pull ?record [:block/uid :node/title])
+              :in $ ?table ?key ?val
+              :where [?record :block/children ?table-block]
+              [?table-block :block/refs ?table-page]
+              [?table-page :node/title ?table]
+              [?table-block :block/children ?key-block]
+              [?key-block :block/refs ?key-page]
+              [?key-page :node/title ?key]
+              [?key-block :block/children ?val-block]
+              [?val-block :block/string ?val-string]
+              [(clojure.string/includes? ?val-string ?val)]]
+            table key val)
       (first)
       (first)))
+
+(def current-user-page
+  (find-records-where-keyval "Person" "Email" (rpt/current-user-email)))
 
 (def current-user-page-uid
   (:uid current-user-page))
@@ -22,10 +29,12 @@
 (def current-user-page-name
   (:title current-user-page))
 
-(defn user-todos [name]
-  (rd/q '[:find (pull ?t [*])
-          :in $ ?n
-          :where [?t :block/refs ?np]
-          [?t :block/refs ?tp]
-          [?np :node/title ?n]
-          [?tp :node/title "TODO"]] name))
+(defn user-tasks [name]
+  (rd/q '[:find (pull ?task [*])
+          :in $ ?person-name
+          :where [?task :block/refs ?person-page]
+          [?task :block/refs ?todo-page]
+          [?todo-page :node/title "TODO"]
+          [?task :block/refs ?task-page]
+          [?task-page :node/title "Task"]
+          [?person-page :node/title ?person-name]] name))

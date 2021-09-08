@@ -5,7 +5,7 @@
    [roam-wiki.views :refer [main]]))
 
 (defn init []
-  (rptd/sidebar-remove! [:all])
-  (let [csc (rptd/insert-custom-sidebar-container-before! nil)]
+  (rptd/sidebar-remove! [:log-buttons :logo])
+  (let [csc (rptd/insert-custom-sidebar-container-before! :shortcuts)]
     (rd/render [main] csc)))
 

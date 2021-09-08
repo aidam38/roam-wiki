@@ -10,13 +10,7 @@
         ;; {:local/root "../roam-plugin-tools"}
         org.clojars.aidam/roam-alpha-api
         {:mvn/version "1.0.3"}}
+        ;; {:local/root "../roam-alpha-pi"}}
  :aliases
  {:cljs
-  {:extra-deps {org.clojure/clojurescript {:mvn/version "1.10.866"}
-                reagent/reagent {:mvn/version "1.1.0"}
-                org.clojars.aidam/roam-plugin-tools
-                {:mvn/version "0.0.4"}
-                ;; {:local/root "../roam-plugin-tools"}
-                org.clojars.aidam/roam-alpha-api
-                {:mvn/version "1.0.3"}}}}}
-                ;; {:local/root "../roam-alpha-api"}}}}}}}
+  {:extra-deps {}}}}

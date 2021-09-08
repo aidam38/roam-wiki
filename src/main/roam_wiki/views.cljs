@@ -13,33 +13,34 @@
 (def divider
   [:div.mb-2 {:style {:flex "0 0 0.5px" :background-color "rgb(57, 75, 89)" :margin-left "20px" :margin-right "20px"}}])
 
-(def todo-nodes (atom []))
+(def task-nodes (atom []))
 
 (defn add-task-list-wrapper []
+  (js/console.log rptd/roam-body-main)
   (.insertBefore
-   (rptd/roam-main)
+   rptd/roam-main
    (gdom/createDom "div" #js{:class "roam-wiki-task-list-wrapper rm-article-wrapper rm-spacing--small"}
                    :style "flex: 0 0 auto; margin-top: 50px;"
                    :innerHTML "<h1>My tasks</h1>")
-   (rptd/roam-body-main)))
+   rptd/roam-body-main))
 
-(defn mount-todo-list! []
-  ;;(rm/clear-body-main)
+(defn mount-task-list! []
+  ;;(rptd/body-main-clear!)
   (when-not (js/document.querySelector ".roam-wiki-task-list-wrapper")
     (let [wrapper (add-task-list-wrapper)
-          todos (map first (rm/user-todos rm/current-user-page-name))]
-      (->> todos
+          tasks (map first (rm/user-tasks rm/current-user-page-name))]
+      (->> tasks
            (mapv #(gdom/createDom "div" #js{:id (:uid %)
                                             :class "py-2"
                                             :style "border-bottom: 1px solid rgba(55, 53, 47, 0.09);
                                                     "}))
 
            (mapv #(.appendChild wrapper %))
-           (reset! todo-nodes)
+           (reset! task-nodes)
            (mapv #(rc/render-block {:uid (.-id %) :el %})))
       (set! js/window.onhashchange
             (fn []
-              (->> @todo-nodes
+              (->> @task-nodes
                    (mapv #(rc/unmount-node %)))
               (.remove wrapper)
               (set! js/window.onhashchange nil))))))
@@ -57,10 +58,10 @@
     "Dashboard"]
    [:a.log-button {:href (rpts/base-url)}
     [:span.bp3-icon.bp3-icon-calendar.icon.bp3-icon-small]
-    "Daily notes"]
-   [:a.log-button {:on-click mount-todo-list!}
-    [:span.bp3-icon.bp3-icon-tick-circle.icon.bp3-icon-small]
-    "My tasks"]])
+    "Daily notes"]])
+  ;;  [:a.log-button {:on-click mount-task-list!}
+  ;;   [:span.bp3-icon.bp3-icon-tick-circle.icon.bp3-icon-small]
+  ;;   "My tasks"]])
 
 (defn find-schema [table]
   (->> table
@@ -101,11 +102,8 @@
   [:div
    [table "Articles" "article"]])
 
-
 (defn main []
   [:div.flex.flex-col
    [user]
    divider
-   [log-buttons]
-   divider
-   [tables]])
+   [log-buttons]])
